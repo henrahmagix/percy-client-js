@@ -1,0 +1,11 @@
+language: node_js
+cache:
+  directories:
+    - $(npm config get cache)
+nvm:
+  # Only 6 is supported at the moment.
+  # - 0.10
+  # - 0.12
+  # - 4
+  # - 5
+  - 6

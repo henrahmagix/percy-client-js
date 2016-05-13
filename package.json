@@ -1,0 +1,27 @@
+{
+  "name": "percy-client-js",
+  "version": "0.0.0",
+  "description": "Low-level Node API client for percy.io. https://percy.io/docs/api/client",
+  "main": "lib/percy.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrahmagix/percy-client-js.git"
+  },
+  "keywords": [
+    "percy.io",
+    "visual",
+    "regression",
+    "testing"
+  ],
+  "author": "Henry Blyth <blyth.henry@gmail.com> (http://henryblyth.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/henrahmagix/percy-client-js/issues"
+  },
+  "homepage": "https://github.com/henrahmagix/percy-client-js#readme"
+}
