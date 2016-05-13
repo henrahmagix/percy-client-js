@@ -4,9 +4,11 @@
   "description": "Low-level Node API client for percy.io. https://percy.io/docs/api/client",
   "main": "lib/percy.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "jasmine": "^2.4.1"
+  },
   "scripts": {
-    "test": "mocha tests/"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
