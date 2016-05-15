@@ -1,8 +1,8 @@
+var Percy = require.main.require('./lib/percy');
 var ENV = process.env;
-var Config = require.main.require('./lib/percy/config');
-describe('Percy::Config', function () {
+describe('Percy.Config', function () {
     beforeEach(function () {
-        this.config = new Config();
+        this.config = new Percy.Config();
     });
 
     it('returns the correct defaults', function () {
