@@ -7,6 +7,25 @@ Original at [https://github.com/percy/percy-client](https://github.com/percy/per
 
 #### Docs here: [https://percy.io/docs/api/client](https://percy.io/docs/api/client)
 
+## Usage
+
+- `npm install percy-client-js`
+
+```js
+var Percy = require('percy-client-js');
+// Then follow the docs on using the Ruby client.
+// For example:
+Percy.config.access_token = '1234567890987654321';
+build = Percy.create_build(Percy.client.config.repo);
+// Add resources... then
+Percy.finalize_build(build['data']['id']);
+```
+
+Ruby can be easily rewritten in JS. To work with the Ruby client examples, use the following transformations:
+- `::` becomes `.`
+    - `Percy::Client::Resource` -> `Percy.Client.Resource`
+- TODO: add more, like `isRoot: true` as function argument should become property on an options object. See resources.js
+
 ## Tests
 
 - `npm test`
