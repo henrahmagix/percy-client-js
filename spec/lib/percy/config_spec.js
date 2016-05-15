@@ -1,22 +1,22 @@
 var ENV = process.env;
-var Percy = require.main.require('./lib/percy');
+var Config = require.main.require('./lib/percy/config');
 describe('Percy::Config', function () {
     beforeEach(function () {
-        this.config = Percy.config;
+        this.config = new Config();
     });
 
     it('returns the correct defaults', function () {
-        expect(this.config.keys).toBe([
-            null,
+        expect(this.config.keys).toEqual([
+            undefined,
             ENV['PERCY_API'],
             false,
-            'percy/percy-client',
+            'henrahmagix/percy-client-js',
             []
         ]);
-        expect(this.config.access_token).toBe(null);
+        expect(this.config.access_token).toBe(undefined);
         expect(this.config.api_url).toBe(ENV['PERCY_API']);
         expect(this.config.debug).toBe(false);
-        expect(this.config.repo).toBe('percy/percy-client');
-        expect(this.config.default_widths).toBe([]);
+        expect(this.config.repo).toBe('henrahmagix/percy-client-js');
+        expect(this.config.default_widths).toEqual([]);
     });
 });
