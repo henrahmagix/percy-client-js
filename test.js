@@ -1,3 +1,5 @@
+var argv = require('minimist')(process.argv.slice(2));
+
 var jasmine = new (require('jasmine'));
 jasmine.loadConfig({
     spec_dir: 'spec',
@@ -8,7 +10,11 @@ jasmine.loadConfig({
         '**/*[hH]elper.js'
     ],
     stopSpecOnExpectationFailure: false,
-    random: false
+    random: true
 });
+
+if (typeof argv.seed === 'number') {
+    jasmine.seed(argv.seed);
+}
 
 jasmine.execute();
