@@ -1,4 +1,4 @@
-var Percy = require('../../lib/percy');
+var Percy = require.main.require('./lib/percy');
 describe('Percy', function () {
     beforeEach(function () {
         Percy.reset();
